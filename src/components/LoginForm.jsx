@@ -4,7 +4,7 @@ import axios from 'axios';
 const LoginForm = () => {
     const [userName, setUserName] = useState('');
     const [passWord, setPassWord] = useState('');
-    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -25,7 +25,7 @@ const LoginForm = () => {
                 <h1 className="title">Chat Application</h1>
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className="input" placeholder="User name" required />
-                    <input type="text" value={passWord} onChange={(e) => setPassWord(e.target.value)} className="input" placeholder="Password" required />
+                    <input type="password" value={passWord} onChange={(e) => setPassWord(e.target.value)} className="input" placeholder="Password" required />
                     <div align="center">
                         <button type="submit" className="button">
                             <span>Start Chatting</span>
